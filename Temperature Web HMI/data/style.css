@@ -1,0 +1,149 @@
+/* ===== GLOBAL LAYOUT ===== */
+body {
+  margin: 0;
+  background-color: #000;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ===== HEADER ===== */
+.page-header {
+  background: #111;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.6);
+}
+
+.page-header h1 {
+  margin: 0;
+  color: #ff9800;
+  letter-spacing: 1px;
+}
+
+/* ===== MAIN CONTENT ===== */
+.page-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* ===== CONTAINER ===== */
+.container {
+  max-width: 600px;
+  background: rgb(164, 167, 163);
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+}
+
+/* ===== HEADINGS ===== */
+.heading h2 {
+  text-align: center;
+  margin: 30px 0 15px;
+  color: #333;
+}
+
+/* ===== BUTTONS ===== */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.container button {
+  font-weight: bold;
+  color: #fff;
+  padding: 10px 20px;
+  background: rgb(22,114,252);
+}
+
+.container button:hover {
+  background: #ff9800;
+  color: #000;
+}
+
+/* ===== SLIDER CONTAINER ===== */
+.config-container {
+  margin-top: 15px;
+  padding: 20px;
+  background: #2b2b2b;
+  border-radius: 12px;
+  box-shadow: inset 0 0 10px rgba(0,0,0,0.7);
+}
+
+/* ===== SLIDERS ===== */
+.slider-group {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 12px;
+  /* margin-bottom: 10px; */
+}
+
+.slider-group label {
+  grid-column: 1 / -1;
+  color: #eee;
+  font-weight: bold;
+}
+
+/* ===== RANGE SLIDER ===== */
+.slider {
+  -webkit-appearance: none;
+  height: 8px;
+  background: linear-gradient(90deg,#ff9800,#ff5722);
+  border-radius: 5px;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: #fff;
+  border: 3px solid #ff9800;
+  box-shadow: 0 0 10px rgba(255,152,0,0.8);
+}
+
+/* ===== VALUE DISPLAY ===== */
+.value {
+  min-width: 50px;
+  text-align: center;
+  font-weight: bold;
+  color: #ff9800;
+  background: #000;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+/* ===== TEMPERATURE READOUT ===== */
+.temp-readout {
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  gap: 15px;
+}
+
+.temp-readout .slider-group {
+  background: #1f1f1f;
+  padding: 15px;
+  border-radius: 10px;
+  justify-content: space-between;
+}
+
+/* ===== FOOTER ===== */
+.page-footer {
+  background: #111;
+  text-align: center;
+  padding: 10px;
+  color: #aaa;
+  font-size: 13px;
+  box-shadow: 0 -2px 6px rgba(0,0,0,0.6);
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .temp-readout {
+    grid-template-columns: 1fr;
+  }
+}

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Heat Bed</title>
+    <link rel="stylesheet" href="bootstrap.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="page-header">
+        <h1>Heat Seal Project</h1>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main class="page-content">
+        <div class="container">
+
+            <!-- MODE BUTTONS -->
+            <div class="button-group">
+                <button class="btn btn-primary" onclick="updateMode('heaton')">Heat Up</button>
+                <button class="btn btn-primary" onclick="updateMode('heatoff')">Heat OFF</button>
+                <button class="btn btn-primary" onclick="updateMode('ideal')">Ideal</button>
+            </div>
+
+            <!-- CONFIGURATION -->
+            <div class="heading">
+                <h2>Heat Bed Configuration</h2>
+            </div>
+
+            <div class="config-container">
+                <div class="slider-group">
+                    <label>Coil1 Temperature</label>
+                    <input type="range" id="c1" class="slider" min="0" max="180" value="150" oninput="updateSliderValue()">
+                    <span id="coil1" class="value">150</span>
+                </div>
+
+                <div class="slider-group">
+                    <label>Coil2 Temperature</label>
+                    <input type="range" id="c2" class="slider" min="0" max="180" value="130" oninput="updateSliderValue()">
+                    <span id="coil2" class="value">130</span>
+                </div>
+
+                <div class="slider-group">
+                    <label>Coil3 Temperature</label>
+                    <input type="range" id="c3" class="slider" min="0" max="180" value="110" oninput="updateSliderValue()">
+                    <span id="coil3" class="value">110</span>
+                </div>
+
+                <div class="slider-group">
+                    <label>Coil4 Temperature</label>
+                    <input type="range" id="c4" class="slider" min="0" max="180" value="90" oninput="updateSliderValue()">
+                    <span id="coil4" class="value">90</span>
+                </div>
+            </div>
+
+            <!-- CURRENT TEMPERATURES -->
+            <div class="heading">
+                <h2>Current Coil Temperatures</h2>
+            </div>
+
+            <div class="config-container temp-readout">
+                <div class="slider-group">
+                    <label>Coil1</label>
+                    <span id="coil1Temp" class="value">--</span>
+                </div>
+                <div class="slider-group">
+                    <label>Coil2</label>
+                    <span id="coil2Temp" class="value">--</span>
+                </div>
+                <div class="slider-group">
+                    <label>Coil3</label>
+                    <span id="coil3Temp" class="value">--</span>
+                </div>
+                <div class="slider-group">
+                    <label>Coil4</label>
+                    <span id="coil4Temp" class="value">--</span>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="page-footer">
+        <p>Design by – Dulitha © 2026 Heat Seal Project. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="bootstrap.js"></script>
+</body>
+</html>
